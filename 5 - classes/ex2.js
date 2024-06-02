@@ -15,16 +15,32 @@ class Pessoa{
 
     calcularImc(){
         const IMC = this.peso/(this.altura * this.altura);
-        return console.log(`O IMC do(a) ${this.nome} é igual a: ${IMC}`);
+        return IMC;
+    }
+
+    classificandoIMC(){
+
+        const imc = this.calcularImc();
+
+        if(imc < 18.5){
+            return (' Abaixo do peso.');
+        } else if (imc >= 18.5 && imc < 25){
+            return (' Peso Normal.');
+        } else if (imc >= 25 && imc < 30){
+            return (' Acima do peso');
+        } else if (imc >= 30 && imc < 40){
+           return (' Obeso.');
+        } else {
+           return (' Obesidade grave.');
+        }
+
     }
 }
 
 const pessoa1 = new Pessoa('Michely', 55, 1.65);
-console.log(pessoa1);
-
-pessoa1.calcularImc();
-
+console.log(pessoa1.classificandoIMC());
+console.log(pessoa1.calcularImc());
 
 const jose = new Pessoa('Jose', 70, 1.75);
-console.log(jose);
-jose.calcularImc();
+console.log(jose.calcularImc());
+console.log(jose.classificandoIMC());
