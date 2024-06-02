@@ -1,7 +1,7 @@
 // objeto é uma coleção  de valores, e funciona através de chave e valor;
 // coleção dinâmica de chave e valor;
 // dinamica pq posso sempre adicionar ou remover valores
-
+// forma literal, não necessita usar classe
 const pessoa = {
     // valores determinados dentro do objeto
     nome: 'Michely',
