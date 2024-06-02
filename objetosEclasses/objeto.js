@@ -1,11 +1,13 @@
 // objeto é uma coleção  de valores, e funciona através de chave e valor;
 // coleção dinâmica de chave e valor;
+// dinamica pq posso sempre adicionar ou remover valores
 
 const pessoa = {
+    // valores determinados dentro do objeto
     nome: 'Michely',
     idade: 25,
 
-    // função dentro de um objeto é chamado de método, e é possivel usar os valores determinados no objeto
+    // a função dentro de um objeto é chamada de método, e é possivel usar os valores determinados no objeto
     descrever: function(){
         
         console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
@@ -16,17 +18,27 @@ const pessoa = {
 // michely.peso = 55.9;
 // delete michely.nome; // exclui um valor do objeto
 
-// console.log(michely.nome);
-// console.log(michely.idade);
-// console.log(michely);
+console.log(pessoa.nome);
+console.log(pessoa.idade);
+console.log(pessoa);
 
 // pessoa.descrever();
 // pessoa.nome = 'Aline';
 // pessoa.idade = '23';
 
-// pessoa.descrever();
+pessoa.descrever();
 
-pessoa.descrever = function () {
+/*pessoa.descrever = function () {
     console.log(`Meu nome é ${this.nome}`);
 }
-pessoa.descrever();
+pessoa.descrever();*/
+
+// acessando dinamicamente os valores dentro do objeto
+
+const atributo = 'nome';
+
+// notação de coleção
+console.log(pessoa[atributo]);
+pessoa['nome'] = 'patati';
+
+console.log(pessoa);
