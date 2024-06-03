@@ -44,3 +44,11 @@ console.log(pessoa1.calcularImc());
 const jose = new Pessoa('Jose', 70, 1.75);
 console.log(jose.calcularImc());
 console.log(jose.classificandoIMC());
+
+const milena = new Pessoa('Milena',46.8, 1.71);
+console.log(milena);
+console.log(milena.classificandoIMC());
+
+const davi = new Pessoa('Davi', 80, 1.72);
+console.log(davi);
+console.log(davi.classificandoIMC());
